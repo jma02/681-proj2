@@ -1,0 +1,59 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input[type="text"] {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    text-underline-offset: -0.3rem;
+    left: 12px; 
+}
+
+.container {
+    text-align: center;
+    width: 450px;
+}
+
+.button-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.step-container {
+    width: 45px;
+}
+
+.options-container {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.mistakes-checkbox{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+td {
+    border: 1px solid black;
+}
+
+td:nth-child(3n) {
+    border-right: 3px solid black;
+}
+
+tr:nth-child(3n) td {
+    border-bottom: 3px solid black;
+}
+
+label {
+    font-size: 7pt;
+}

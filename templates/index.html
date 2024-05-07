@@ -1,0 +1,132 @@
+<!-- Inside <head> -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<script src="{{ url_for('static', filename='index.js') }}"></script>
+<div class="container">
+    <h3>Sudoku Solver</h3>
+    <table>
+        <tbody>
+            <tr>
+                <td><input type="text" size="3" name="11"></td>
+                <td><input type="text" size="3" name="12"></td>
+                <td class="box-side"><input type="text" size="3" name="13"></td>
+                <td><input type="text" size="3" name="14"></td>
+                <td><input type="text" size="3" name="15"></td>
+                <td class="box-side"><input type="text" size="3" name="16"></td>
+                <td><input type="text" size="3" name="17"></td>
+                <td><input type="text" size="3" name="18"></td>
+                <td><input type="text" size="3" name="19"></td>
+            </tr>
+            <tr>
+                <td><input type="text" size="3" name="21"></td>
+                <td><input type="text" size="3" name="22"></td>
+                <td class="box-side"><input type="text" size="3" name="23"></td>
+                <td><input type="text" size="3" name="24"></td>
+                <td><input type="text" size="3" name="25"></td>
+                <td class="box-side"><input type="text" size="3" name="26"></td>
+                <td><input type="text" size="3" name="27"></td>
+                <td><input type="text" size="3" name="28"></td>
+                <td><input type="text" size="3" name="29"></td>
+            </tr>
+            <tr>
+                <td class="box-side"><input type="text" size="3" name="31"></td>
+                <td class="box-side"><input type="text" size="3" name="32"></td>
+                <td class="box-side box-corner"><input type="text" size="3" name="33"></td>
+                <td class="box-side"><input type="text" size="3" name="34"></td>
+                <td class="box-side"><input type="text" size="3" name="35"></td>
+                <td class="box-side box-corner"><input type="text" size="3" name="36"></td>
+                <td class="box-side"><input type="text" size="3" name="37"></td>
+                <td class="box-side"><input type="text" size="3" name="38"></td>
+                <td class="box-side"><input type="text" size="3" name="39"></td>
+            </tr>
+            <tr>
+                <td><input type="text" size="3" name="41"></td>
+                <td><input type="text" size="3" name="42"></td>
+                <td class="box-side"><input type="text" size="3" name="43"></td>
+                <td><input type="text" size="3" name="44"></td>
+                <td><input type="text" size="3" name="45"></td>
+                <td class="box-side"><input type="text" size="3" name="46"></td>
+                <td><input type="text" size="3" name="47"></td>
+                <td><input type="text" size="3" name="48"></td>
+                <td><input type="text" size="3" name="49"></td>
+            </tr>
+            <tr>
+                <td class="box-side"><input type="text" size="3" name="51"></td>
+                <td class="box-side"><input type="text" size="3" name="52"></td>
+                <td class="box-side box-corner"><input type="text" size="3" name="53"></td>
+                <td class="box-side"><input type="text" size="3" name="54"></td>
+                <td class="box-side"><input type="text" size="3" name="55"></td>
+                <td class="box-side box-corner"><input type="text" size="3" name="56"></td>
+                <td class="box-side"><input type="text" size="3" name="57"></td>
+                <td class="box-side"><input type="text" size="3" name="58"></td>
+                <td class="box-side"><input type="text" size="3" name="59"></td>
+            </tr>
+            <tr>
+                <td><input type="text" size="3" name="61"></td>
+                <td><input type="text" size="3" name="62"></td>
+                <td class="box-side"><input type="text" size="3" name="63"></td>
+                <td><input type="text" size="3" name="64"></td>
+                <td><input type="text" size="3" name="65"></td>
+                <td class="box-side"><input type="text" size="3" name="66"></td>
+                <td><input type="text" size="3" name="67"></td>
+                <td><input type="text" size="3" name="68"></td>
+                <td><input type="text" size="3" name="69"></td>
+            </tr>
+            <tr>
+                <td class="box-side"><input type="text" size="3" name="71"></td>
+                <td class="box-side"><input type="text" size="3" name="72"></td>
+                <td class="box-side box-corner"><input type="text" size="3" name="73"></td>
+                <td class="box-side"><input type="text" size="3" name="74"></td>
+                <td class="box-side"><input type="text" size="3" name="75"></td>
+                <td class="box-side box-corner"><input type="text" size="3" name="76"></td>
+                <td class="box-side"><input type="text" size="3" name="77"></td>
+                <td class="box-side"><input type="text" size="3" name="78"></td>
+                <td class="box-side"><input type="text" size="3" name="79"></td>
+            </tr>
+            <tr>
+                <td><input type="text" size="3" name="81"></td>
+                <td><input type="text" size="3" name="82"></td>
+                <td class="box-side"><input type="text" size="3" name="83"></td>
+                <td><input type="text" size="3" name="84"></td>
+                <td><input type="text" size="3" name="85"></td>
+                <td class="box-side"><input type="text" size="3" name="86"></td>
+                <td><input type="text" size="3" name="87"></td>
+                <td><input type="text" size="3" name="88"></td>
+                <td><input type="text" size="3" name="89"></td>
+            </tr>
+            <tr>
+                <td><input type="text" size="3" name="91"></td>
+                <td><input type="text" size="3" name="92"></td>
+                <td class="box-side"><input type="text" size="3" name="93"></td>
+                <td><input type="text" size="3" name="94"></td>
+                <td><input type="text" size="3" name="95"></td>
+                <td class="box-side"><input type="text" size="3" name="96"></td>
+                <td><input type="text" size="3" name="97"></td>
+                <td><input type="text" size="3" name="98"></td>
+                <td><input type="text" size="3" name="99"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="button-container">
+        <div>
+            <button id="clear-all">Clear All</button>
+            <button id="solve">Solve</button>
+        </div>
+        <div class="options-container">
+            <button id="all-way-back" disabled onclick="changeStep(0)">&#171;</button>
+            <button id="step-left" disabled onclick="changeStep(step_number - 1)">&#8249;</button>
+            <button id="step-right" disabled onclick="changeStep(step_number + 1)">&#8250;</button>
+            <button id="all-way-forward" disabled onclick="changeStep(assignment.length)">&#187;</button>
+            <input class="step-container" type="number" id="page-input" name="page-input" min="1" oninput="changeStep(this.value)" disabled>
+            <div class="mistakes-checkbox">
+                <label for="show-mistake">Mistakes?</label>
+                <input type="checkbox" id="show-mistake" name="show-mistake" onchange="toggleMistakeVisibility()">
+            </div>
+        </div>
+    </div>
+</div>
