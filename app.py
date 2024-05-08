@@ -17,7 +17,7 @@ def solve():
             cell_name = f"{i}{j}"
             cell_value = table_data.get(cell_name, '')
             if cell_value.strip():
-                row.append(int(cell_value)) 
+                row.append(int(cell_value[0])) 
             else:
                 row.append(0)
         sudoku_grid.append(row)

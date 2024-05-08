@@ -113,7 +113,7 @@ window.onload = function() {
         var formData = {};
         var inputs = document.querySelectorAll('input[type="text"]');
         inputs.forEach(function(input) {
-            formData[input.name] = input.value;
+            formData[input.name] = input.value[0];
         });
         grid_inputs = Object.entries(formData).filter(([_,y]) => y!=='');
         fetch('/solve', {
