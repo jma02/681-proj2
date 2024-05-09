@@ -63,8 +63,10 @@ function changeStep(step) {
     grid_inputs.forEach(
         (input) => {
             let [gridNumber, value] = input;
-            var gridElement = document.querySelector('input[name="' + gridNumber + '"]');
-            gridElement.value = value;
+            if(value){
+                var gridElement = document.querySelector('input[name="' + gridNumber + '"]');
+                gridElement.value = value;
+            }
         }
     )
     for(var i = 0; i < step; i++){ 
